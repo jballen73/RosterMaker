@@ -1,4 +1,3 @@
-import org.apache.poi.hssf.record.HorizontalPageBreakRecord;
 import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
