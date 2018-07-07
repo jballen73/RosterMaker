@@ -7,16 +7,24 @@ The spreadsheet must be set up in a very particular way in order for the jar to 
 ![Demo](example.PNG)
 
 Row 1: The Activity Choices:  The names of the activities
+
 Note: If there are more than 6 activities, this will not work correctly, but it is easily fixable to do so.
+
 Row 2: The Meeting Places: The meeting places, same note as above
+
 Row 3: Capacity: See rows 1 and 2
+
 Row 4: A header row that doesn’t matter
+
 Row 5: The first RC, with the rest of the students and RC’s below them
+
 Rows 6+: Students, with the order of Last Name, First Name, Choice 1, Choice 2, Choice 3
-The takeaway from this: Fill in the area on the side (as per usual) and everything will automatically fill in as necessary.  Don’t add new rows or put text in those first 3 rows other than what will fill in automatically.  Blank activities will be dealt with automatically.
+
+The takeaway from this: Fill in the area on the side (as per usual) and everything will automatically fill in as necessary.  Don’t add new rows or put text in those first 3 rows other than the information above.  Blank activity spaces will be dealt with automatically.
 
 Preparing the Spreadsheet:
 A small amount of work needs to be done in order to prepare the spreadsheet for use by the jar.
+
 1:  Every RC who does not have RC Group Night for that day needs to have “RC” typed in the third column (the first choice column), all capitals with no other text.  Typing this for RC’s with group night should not break anything, but is unnecessary.
 
 2:  Every RC who has priority for that day’s evening activities should have “P” typed in the 4th column (the second choice column), again capital with no other text.
@@ -24,10 +32,11 @@ A small amount of work needs to be done in order to prepare the spreadsheet for 
 That’s it.  Now you can download the spreadsheet as a CSV (File->Download As-> Comma-Separated Values) and get to work!
 
 Using the jar file:
-First, you must download the spreadsheet as a CSV (explained above), and download the jar file (RosterMaker.jar).  Move them to the same directory (folder) that is preferably not buried within a bunch of other folders.  Then open up Command Line (Terminal on Mac or Linux).  You will now need to go to the directory containing the jar and csv.  Use the “cd” command to change directories step by step until you arrive in the folder containing the files.  Tab to autocomplete will be your friend.  If you go to far, use “cd ..” to back out one layer.  If you’re having too much trouble navigating with command line, simply move the jar and csv into the directory your command line is currently in.
+First, you must download the spreadsheet as a CSV (explained above), and download the jar file (out/artifacts/RosterMaker_jar/RosterMaker.jar).  Move them to the same directory (folder) that is preferably not buried within a bunch of other folders.  Then open up Command Line (Terminal on Mac or Linux).  You will now need to go to the directory containing the jar and csv.  Use the “cd” command to change directories step by step until you arrive in the folder containing the files.  Tab to autocomplete will be your friend.  If you go to far, use “cd ..” to back out one layer.  If you’re having too much trouble navigating with command line, simply move the jar and csv into the directory your command line is currently in.
 
 The Magic:
 Enter the following command into your command line:
+
 java -jar RosterMaker.jar SPREADSHEETFILEPUTNAMEHERE.csv
 
 Obviously that should be replaced with the name of the csv file.  If you type the first letter of the file, you should be able to hit tab repeatedly until the correct name autocompletes.  You must have at least Java 8 on your computer for this step to work.
