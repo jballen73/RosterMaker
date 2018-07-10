@@ -6,7 +6,7 @@ public class Activity {
     private String name;
     private String meetingPlace;
     private int capacity;
-    private List<String> students = new ArrayList<>();
+    private List<Student> students = new ArrayList<>();
     public Activity(String name, String meetingPlace, int capacity) {
         this.name = name;
         this.meetingPlace = meetingPlace;
@@ -18,11 +18,11 @@ public class Activity {
     public String getMeetingPlace() {
         return meetingPlace;
     }
-    public List<String> getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
     public void addStudent(Student student) {
-        students.add(student.getName());
+        students.add(student);
         Collections.sort(students);
     }
     public int getCapacity() {

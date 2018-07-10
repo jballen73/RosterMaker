@@ -41,12 +41,12 @@ public class FileWriter {
             }
 
             int index = 0;
-            for (String student : activity.getStudents()) {
+            for (Student student : activity.getStudents()) {
                 XWPFTableCell cell = cellList.get(index++);
                 cell.removeParagraph(0);
                 XWPFRun cellRun =  cell.addParagraph().createRun();
                 cellRun.setFontSize(sizeSelector(activity.getStudents().size()));
-                cellRun.setText(student);
+                cellRun.setText(student.getName());
             }
         }
         document.write(out);
