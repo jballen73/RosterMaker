@@ -5,12 +5,7 @@ public class Student implements Comparable<Student> {
     private String choice1;
     private String choice2;
     private String choice3;
-    public Student(String name, String one, String two, String three) {
-        this.name = name;
-        choice1 = one.trim();
-        choice2 = two.trim();
-        choice3 = three.trim();
-    }
+
     public Student(String lastName, String firstName,
                    String one, String two, String three) {
         this.firstName = firstName.trim();

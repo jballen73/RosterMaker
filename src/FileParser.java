@@ -46,10 +46,9 @@ public class FileParser {
         return activityMap;
     }
     private List<String[]> trimFile(List<String[]> lines) {
-        lines.remove(0);
-        lines.remove(0);
-        lines.remove(0);
-        lines.remove(0);
+        for (int i = 0; i < 4; i++) {
+            lines.remove(0);
+        }
         return lines.stream().filter(x -> !x[2].equals("")).
                 collect(Collectors.toCollection(ArrayList::new));
     }
