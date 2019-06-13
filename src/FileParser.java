@@ -104,6 +104,18 @@ public class FileParser {
         throw new RuntimeException("All activities full before all students assigned");
     }
     private Activity getBestChoice (Student student, Map<String, Activity> activityMap) {
+        if (!activityMap.containsKey(student.get1())) {
+            throw new IllegalArgumentException("Student " + student.getName()
+                    + " had an activity not in the list: " + student.get1());
+        }
+        if (!activityMap.containsKey(student.get2())) {
+            throw new IllegalArgumentException("Student " + student.getName()
+                    + " had an activity not in the list: " + student.get2());
+        }
+        if (!activityMap.containsKey(student.get3())) {
+            throw new IllegalArgumentException("Student " + student.getName()
+                    + " had an activity not in the list: " + student.get3());
+        }
         if (activityMap.get(student.get1()).isOpen()) {
             return activityMap.get(student.get1());
         } else if (activityMap.get(student.get2()).isOpen()){
